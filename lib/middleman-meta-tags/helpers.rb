@@ -222,8 +222,8 @@ module Middleman
         full_title  = ''
         title       = safe_title(meta_tags[:title])
 
-        (full_title << title) if title.present?
-        (full_title << " #{separator} ") unless title.blank? || meta_tags[:site].blank?
+        (full_title << title) unless title.blank? || meta_tags[:site] == title
+        (full_title << " #{separator} ") unless title.blank? || meta_tags[:site].blank? || meta_tags[:site] == title
         (full_title << meta_tags[:site]) if meta_tags[:site].present?
         full_title
       end

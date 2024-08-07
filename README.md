@@ -96,9 +96,8 @@ Then it looks the page meta data to attempt to display the following keys:
 - MM `title` => META `og:title`
 - MM `host` => optional attribute for composing `thumbnail` src with asset helper
 
-In addition, if you want to customize meta tags by each page's frontmatter, you
-can add `customize_by_frontmatter: true` in `data/site.yml`. The priority would
-be set_meta_tags > frontmatter > site wide defaults.
+You can also customize the meta tags by each page's frontmatter. The priority is
+set_meta_tags > frontmatter > site wide defaults.
 
 ### Manually adding addition tags
 

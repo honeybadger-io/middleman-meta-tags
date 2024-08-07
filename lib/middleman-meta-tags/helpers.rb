@@ -180,8 +180,8 @@ module Middleman
       private
 
       def fall_through(site_data, name, key, default = nil)
-        value = current_page.data[key] ||
-                meta_tags[key] ||
+        value = meta_tags[key] ||
+                current_page.data[key] ||
                 site_data[key] ||
                 default
 

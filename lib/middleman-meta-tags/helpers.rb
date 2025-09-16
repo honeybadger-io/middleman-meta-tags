@@ -55,7 +55,7 @@ module Middleman
         title = need_full_title ? full_title(meta_tags) : safe_title(meta_tags[:title])
         meta_tags.delete(:title)
         meta_tags.delete(:separator)
-        result << content_tag(:title, title) if title.present?
+        result << content_tag(:title, escape_value(title)) if title.present?
 
         description = safe_description(meta_tags.delete(:description))
         result << tag(:meta, name: :description, content: description) if description.present?

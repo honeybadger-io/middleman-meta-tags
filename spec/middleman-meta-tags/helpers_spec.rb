@@ -15,16 +15,15 @@ describe Middleman::MetaTags::Helpers do
   end
 
   it 'transforms description tag' do
-    h.set_meta_tags description: 'Relevant title of more than 220 characters
-1 Relevant title of more than 220 characters
-2 Relevant title of more than 220 characters
-3 Relevant title of more than 220 characters
-4 Relevant title of more than 220 characters'
-    expect(h.display_meta_tags).to eql('<meta name="description" content="Relevant title of more than 220 characters
-1 Relevant title of more than 220 characters
-2 Relevant title of more than 220 characters
-3 Relevant title of more than 220 characters
-4 Relevant title of more than 220 chara..." />')
+    h.set_meta_tags description: 'Relevant title of more than 170 characters
+1 Relevant title of more than 170 characters
+2 Relevant title of more than 170 characters
+3 Relevant title of more than 170 characters
+4 Relevant title of more than 170 characters'
+    expect(h.display_meta_tags).to eql('<meta name="description" content="Relevant title of more than 170 characters
+1 Relevant title of more than 170 characters
+2 Relevant title of more than 170 characters
+3 Relevant title of more than 170 ..." />')
   end
 
   it 'transforms keywords tag' do
